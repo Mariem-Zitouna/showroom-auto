@@ -1,0 +1,23 @@
+.container {
+  margin: 30px;
+  padding: 5px;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(145, 128, 128);
+  border-radius: 20px;
+}
+
+input {
+  all: unset;
+  font-weight: bold;
+}
+
+fa-icon {
+  cursor: pointer;
+}
+
+label {
+  font-weight: bold;
+  color: rgb(255, 7, 7);
+}
