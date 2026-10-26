@@ -21,3 +21,28 @@ label {
   font-weight: bold;
   color: rgb(255, 7, 7);
 }
+.cars-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.auto-card img{
+    width: 50%;
+}
+.auto-card{
+    margin: 20px;
+    width: 20%;
+    padding: 10px;
+    border: 2px solid #a9a5a5;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px #a9a5a5;
+    height: fit-content;
+
+}
+button{
+    all:unset;
+    font-weight: bold;
+    color:rgb(145, 143, 143);
+    cursor: pointer;
+    
+}

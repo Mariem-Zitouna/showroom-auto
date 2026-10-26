@@ -14,6 +14,13 @@ export class App {
     this.title.set('Myshowroom');
   }
 
+  selectedCar!: Auto 
+  selectCar(auto:Auto){
+    this.selectedCar=auto
+    
+
+  }
+
   autoList: Auto []= [
     {     
       id:1,

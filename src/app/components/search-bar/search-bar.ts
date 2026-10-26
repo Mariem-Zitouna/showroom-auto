@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import { Auto } from '../../interfaces/auto';
 
 
 @Component({
@@ -10,5 +11,23 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
   templateUrl: './search-bar.html',
 })
 export class SearchBar {
-  faMagnifyingGlass = faMagnifyingGlass;
+  faMagnifyingGlass = faMagnifyingGlass
+
+  @Input() autos: Auto[] =[]
+  selectedAutos: Auto[] = []
+
+  @Output() onSelectCar=new EventEmitter<Auto>()
+
+  selectAutos(selectedBrand: string) {
+    if(selectedBrand){
+      this.selectedAutos=this.autos.filter(
+        x => x.brand.toLowerCase().startsWith(selectedBrand.toLowerCase()))
+    }
+    else
+      this.selectedAutos=this.autos
+
+  }
+  selectCar(auto: Auto){
+    this.onSelectCar.emit(auto)
+  }
 }
